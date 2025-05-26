@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - Úrlapkezelés</title>
+    <style>
+        .form-container {
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <fieldset>
+            <legend>Tanfolyam</legend>
+            <form action="" id="userForm">
+                <p>
+                    <label for="nev">Név:</label>
+                    <input type="text" name="nev" id="nev" placeholder="Név megadása.." required>
+                </p>
+                <p>
+                    <label for="oktato">Oktató:</label>
+                    <input type="text" name="oktato" id="oktato" placeholder="Oktató megadása.." required>
+                </p>
+                <p>
+                    <label for="kezdo_datum">Kezdő dátum:</label>
+                    <input type="date" name="kezdo_datum" id="kezdo_datum" placeholder="Dátum megadása.." required>
+                </p>
+                <p>
+                    <label for="veg_datum">Vég dátum:</label>
+                    <input type="date" name="veg_datum" id="veg_datum" placeholder="Dátum megadása.." required>
+                </p>
+                <p>
+                    <label for="oraszam">Óraszám:</label>
+                    <input type="number" name="oraszam" id="oraszam" placeholder="Óraszám megadása.." required>
+                </p>
+
+                <p>
+                    <button type="submit">Elküld</button>
+                </p>
+            </form>
+        </fieldset>
+        <h3>LocalStorage adatok megjelenítése</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tanfolam ID</th>
+                    <th>Név</th>
+                    <th>Oktató</th>
+                    <th>Kezdő dátum</th>
+                    <th>Vég dátum</th>
+                    <th>Óraszám</th>
+                </tr>
+            </thead>
+            <tbody id="usersTable"><!--Ide jönnek az adatok--></tbody>
+        </table>
+    </div>
+    <script src="form.js"></script>
+</body>
+
+</html>
